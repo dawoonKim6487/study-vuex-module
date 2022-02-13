@@ -5,7 +5,9 @@ const board = {
     },
     mutations: {},
     actions: {},
-    modules: {},
+    getters: {
+        boardTit: state => state.tit
+    }
 };
 
 export default board;

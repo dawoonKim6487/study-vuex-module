@@ -5,7 +5,9 @@ const autho = {
     },
     mutations: {},
     actions: {},
-    modules: {},
+    getters: {
+        userName: state => state.name
+    },
 };
 
 

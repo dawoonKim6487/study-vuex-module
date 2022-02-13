@@ -1,21 +1,24 @@
 <template>
-  <div>userName:{{$store.state.autho.name}}</div>
-  <div>tit:{{$store.state.board.tit}}</div>
+  <div>
+    <section>
+      <h2>State</h2>
+      <div>userName:{{$store.state.autho.name}}</div>
+      <div>tit:{{$store.state.board.tit}}</div>
+    </section>
+    <section>
+      <h2>getters</h2>
+      <div>userName:{{userName}}</div>
+      <div>tit:{{boardTit}}</div>
+    </section>
+  </div>
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 export default {
   name: "App",
+  computed: {
+    ...mapGetters(["userName", "boardTit"]),
+  },
 };
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
