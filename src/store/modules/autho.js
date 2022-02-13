@@ -1,4 +1,4 @@
-export const autho = {
+const autho = {
     state: {
         name: 'dawoon',
         userId: 'dawoon6487'
@@ -7,3 +7,6 @@ export const autho = {
     actions: {},
     modules: {},
 };
+
+
+export default autho
